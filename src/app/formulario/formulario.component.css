@@ -1,0 +1,8 @@
+.formulario {
+    background-color: orange;
+}
+
+.formulario .titulo {
+    background-color: wheat;
+    color: black;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tarea } from './models/tarea.model'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TodoSimple';
+
+  listaTareas: Tarea[];
+
+  constructor() {
+    this.listaTareas = []//new array
+  }
+
+  onTareaEnviada($event) {
+    console.log($event);
+    this.listaTareas.push($event);
+  }
 }
